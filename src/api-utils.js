@@ -1,5 +1,5 @@
 import request from 'superagent';
-const URL = 'https://murmuring-bayou-68545.herokuapp.com/';
+const URL = 'https://murmuring-bayou-68545.herokuapp.com';
 
 export async function signUpNewUser(email, password) {
     const response = await request
