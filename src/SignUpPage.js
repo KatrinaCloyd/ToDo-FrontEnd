@@ -14,8 +14,7 @@ export default class SignUpPage extends Component {
         const user = await signUpNewUser(this.state.email, this.state.password);
         const token = user.token;
         this.props.handleUserChange(token);
-        console.log('done... check local storage and state')
-        // this.props.history.push('/todos');
+        this.props.history.push('/todos');
     }
 
     render() {

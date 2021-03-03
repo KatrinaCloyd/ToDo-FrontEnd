@@ -9,6 +9,7 @@ import Home from './Home.js'
 import LoginPage from './LoginPage.js'
 import SignUpPage from './SignUpPage.js'
 import ToDoListPage from './ToDoListPage.js'
+import PrivateRoute from './PrivateRoute.js';
 import './App.css'
 import { getLocalStorage, setLocalStorage } from './storage-utils.js'
 
@@ -43,10 +44,11 @@ export default class App extends Component {
               exact
               render={(routerProps) => <SignUpPage handleUserChange={this.handleUserChange} {...routerProps} />}
             />
-            <Route
+            <PrivateRoute
               path="/todos"
               exact
-              render={(routerProps) => <ToDoListPage {...routerProps} />}
+              token={this.state.token}
+              render={(routerProps) => <ToDoListPage token={this.state.token} {...routerProps} />}
             />
           </Switch>
         </Router>

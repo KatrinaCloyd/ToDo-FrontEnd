@@ -14,8 +14,30 @@ form{
   margin-left: 25%;
   margin-right: 25%;
 }
-input, button{
+input, button, select{
   margin: 5px;
   height: 30px;
   width: 200px;
+}
+
+.toDoItem{
+  margin: 5px;
+  height: 30px;
+  width: 200px;
+  border:solid 1px grey;
+  padding: 3px;
+  text-align: center;
+}
+
+.toDoItem:hover, button:hover {
+  border:solid 1px grey;
+  background-color: hotpink;
+  cursor: pointer;
+  border-radius: 3px;
+  transform:translateX(2px)
+}
+
+.completed {
+  background-color: grey;
+  cursor: none;
 }
