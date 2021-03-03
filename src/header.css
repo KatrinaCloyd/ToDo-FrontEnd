@@ -1,0 +1,8 @@
+.header{
+    height: 140px;
+    width: 100%;
+    padding: 10px;
+    background-color: grey;
+    text-align: center;
+    /* box-shadow: indigo 0px 3px 5px; */
+}

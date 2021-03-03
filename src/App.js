@@ -9,8 +9,19 @@ import Home from './Home.js'
 import LoginPage from './LoginPage.js'
 import SignUpPage from './SignUpPage.js'
 import ToDoListPage from './ToDoListPage.js'
+import './App.css'
+import { getLocalStorage, setLocalStorage } from './storage-utils.js'
 
 export default class App extends Component {
+  state = {
+    token: getLocalStorage()
+  }
+
+  handleUserChange = (token) => {
+    this.setState({ token: token })
+    setLocalStorage(token);
+  }
+
   render() {
     return (
       <div>
@@ -25,12 +36,12 @@ export default class App extends Component {
             <Route
               path="/login"
               exact
-              render={(routerProps) => <LoginPage {...routerProps} />}
+              render={(routerProps) => <LoginPage handleUserChange={this.handleUserChange} {...routerProps} />}
             />
             <Route
               path="/signup"
               exact
-              render={(routerProps) => <SignUpPage {...routerProps} />}
+              render={(routerProps) => <SignUpPage handleUserChange={this.handleUserChange} {...routerProps} />}
             />
             <Route
               path="/todos"
