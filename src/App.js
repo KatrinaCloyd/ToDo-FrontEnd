@@ -23,11 +23,15 @@ export default class App extends Component {
     setLocalStorage(token);
   }
 
+  handleLogout = () => {
+    this.handleUserChange();
+  }
+
   render() {
     return (
       <div>
         <Router>
-          <Header />
+          <Header handleLogout={this.handleLogout} />
           <Switch>
             <Route
               path="/"

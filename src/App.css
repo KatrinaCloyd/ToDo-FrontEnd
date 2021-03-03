@@ -20,24 +20,50 @@ input, button, select{
   width: 200px;
 }
 
+.list, .add-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .toDoItem{
   margin: 5px;
   height: 30px;
   width: 200px;
   border:solid 1px grey;
-  padding: 3px;
+  padding: 5px;
   text-align: center;
 }
 
 .toDoItem:hover, button:hover {
-  border:solid 1px grey;
-  background-color: hotpink;
+  border:solid 3px grey;
   cursor: pointer;
   border-radius: 3px;
-  transform:translateX(2px)
+  transform:translateY(2px)
 }
 
-.completed {
+.urgent{
+  color: #9C1615;
+  font-weight: 900;
+}
+
+.high{
+  color: #B2171B;
+}
+
+.medium{
+  color: #D92830;
+}
+
+.low{
+  color: purple;
+}
+
+.completed, .completed:hover {
+  border:none;
   background-color: grey;
-  cursor: none;
+  cursor: default;
+  color: black;
+  transform: none;
 }

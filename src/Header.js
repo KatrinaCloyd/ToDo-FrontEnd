@@ -11,7 +11,7 @@ export default class Header extends Component {
                     <NavLink to="/login">Log In</NavLink>
                     <NavLink to="/signup">Sign Up</NavLink>
                     <NavLink to="/todos">Your To Do List</NavLink>
-                    <NavLink to="/">Sign Out</NavLink>
+                    <NavLink onClick={this.props.handleLogout} to="/">Sign Out</NavLink>
                 </div>
             </div>
         )
