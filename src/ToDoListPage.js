@@ -54,8 +54,8 @@ export default class ToDoListPage extends Component {
                         <button>Add New Item</button>
                     </form>
                 </div>
-                {!this.state.allUserToDos.length && <p>Looks like you don't have any To Do items yet!</p>}
                 <div className='list'>
+                    {!this.state.allUserToDos.length && <p>Looks like you don't have any To Do items yet!</p>}
                     <h3>Here is You To Do List! </h3>
                     {this.state.allUserToDos.map(todo =>
                         <p key={todo.todo}
